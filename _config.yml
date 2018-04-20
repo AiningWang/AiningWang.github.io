@@ -1,0 +1,78 @@
+#######################
+# Theme Customization #
+#######################
+
+title: A.Wang                              # used in <title> tag & site header
+author: Aining Wang                        # used in a <meta> tag & /feed.xml
+description: >                             # used in a <meta> tag & /feed.xml
+  Hello 911 emergency, there's a handsome guy in my house!
+  Oh wait a second, cancel that. It's only me.
+slogan: Yeah!                               # used in site header, beside title
+avatar: /i/avatar.png                       # used as portrait in site header
+banner: /i/mountains.svg                    # used as background in site header
+url: http://ainingwang.github.com              # used by plugins to generate feed.xml and sitemap.xml
+baseurl: ''                                 # prepended to all absolute filepaths
+repo: https://github.com/AiningWang             # used in footer
+
+# Objects listed here will appear in the main nav menu.
+# Exceeding four items may cause problems on the desktop (>900px wide) layout.
+nav_menu:
+  - name: Posts
+    url: /
+    icon: /i/icons.svg#posts # icons should be 24x24 px.
+  - name: Projects
+    url: /projects
+    icon: /i/icons.svg#portfolio
+  - name: GitHub
+    url: https://github.com/AiningWang/
+    icon: /i/icons.svg#github
+    outbound: true      # this key sets a link to open in a new window.
+  - name: Contact
+    scheme: mailto      # these keys enable email obfuscation.
+    handle: aining.wang       # you know, to protect you from bots. (handle and domain
+    domain: nyu.com  # are separated in case bots crawl GitHub repos, too.)
+    icon: /i/icons.svg#email
+
+# Objects listed here will appear on the /projects.html page.
+projects:
+  - title: Event-Classification
+    teaser: A News Classification. A NLP tool for a business platform.
+    url: https://github.com/AiningWang/Event-Classification
+    category: NLP
+
+
+#################
+# Site Settings #
+#################
+
+incremental: true
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - TODO.md
+
+permalink: /:collection/:path
+
+collections:
+  category: { output: true }
+  tag:      { output: true }
+
+defaults:
+  - scope:  { type:   posts    }
+    values: { layout: post     }
+  - scope:  { type:   tag      }
+    values: { layout: listing  }
+  - scope:  { type:   category }
+    values: { layout: listing  }
+
+sass:
+  sass_dir: _assets/css
+
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+paginate: 10
