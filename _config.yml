@@ -35,10 +35,27 @@ nav_menu:
 
 # Objects listed here will appear on the /projects.html page.
 projects:
-  - title: Event-Classification
+  - title: Mobile Video Popularity Time Series Modeling
+    teaser: A first view on mobile video popularity as time series
+    url: https://dl.acm.org/citation.cfm?id=2944872
+    category: time series, big data
+  - title: Matrix Multiplication using MapReduce
+    teaser: Algorithm for matrix multiplication with Map Reduce
+    url: https://github.com/AiningWang/Matrix-Multiplication-using-MapReduce
+    category: MapReduce, Algorithm
+  - title: Event Classification
     teaser: A News Classification. A NLP tool for a business platform.
     url: https://github.com/AiningWang/Event-Classification
     category: NLP
+  - title: Chinese Words Segmentation
+    teaser: Chinese word segmentation algorithm based on entropy (without dictionary)
+    url: https://github.com/AiningWang/Chinese-Words-Segmentation
+    category: NLP
+  - title: User Behavior Analysis and Video Popularity Prediction
+    teaser: Predict video popularity based on time series modeling and applied it into video caching.
+    url: https://dl.acm.org/citation.cfm?id=3233173.3226035
+    category: time series, big data
+  
 
 
 #################
